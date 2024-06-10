@@ -11,6 +11,9 @@ public class CheckoutStepTwoPage {
     @FindBy(id = "react-burger-menu-btn")
     WebElement menuBtn;
 
+    @FindBy(id = "finish")
+    public WebElement finishBtn;
+
     public CheckoutStepTwoPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

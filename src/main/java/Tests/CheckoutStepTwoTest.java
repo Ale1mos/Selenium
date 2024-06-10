@@ -41,4 +41,17 @@ public class CheckoutStepTwoTest {
         checkoutStepTwoPage.isMenuBtnDisplayed();
     }
 
+    @Test
+    public void testDisplayText(){
+        driver.get("https://www.saucedemo.com/");
+        loginPage.login("standard_user","secret_sauce");
+
+        inventoryPage.clickOnItemCart();
+        cartPage.clickOnCheckout();
+        checkoutStepOnePage.fillCheckoutForm("a","b","1");
+        checkoutStepOnePage.clickOnContinue();
+
+        checkoutStepTwoPage.finishBtn.click();
+    }
+
 }
